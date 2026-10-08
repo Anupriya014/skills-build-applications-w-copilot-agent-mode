@@ -1,0 +1,43 @@
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+main {
+  min-height: calc(100vh - 72px);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
