@@ -15,6 +15,14 @@ const baseUrl = process.env.CODESPACE_NAME
 
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.json({
+    message: 'OctoFit API is running',
+    endpoints: ['/api/users/', '/api/teams/', '/api/activities/', '/api/leaderboard/', '/api/workouts/'],
+    frontend: 'http://localhost:5173',
+  });
+});
+
 app.get('/api/users/', async (_req, res) => {
   const users = await User.find();
   res.json(users);
