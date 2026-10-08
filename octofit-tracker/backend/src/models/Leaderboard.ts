@@ -1,8 +1,11 @@
 import { Schema, model } from 'mongoose';
 
-const leaderboardSchema = new Schema({
-  name: String,
-  score: Number,
-});
+const leaderboardSchema = new Schema(
+  {
+    name: String,
+    score: Number,
+  },
+  { collection: 'leaderboard' },
+);
 
 export default model('Leaderboard', leaderboardSchema);
