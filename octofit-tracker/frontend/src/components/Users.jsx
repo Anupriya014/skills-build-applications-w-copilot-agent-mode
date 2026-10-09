@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { endpoints, normalizeCollection } from '../api.js';
+import { apiBase, normalizeCollection } from '../api.js';
 
 export default function Users() {
   const [items, setItems] = useState([]);
@@ -8,7 +8,7 @@ export default function Users() {
   useEffect(() => {
     let isMounted = true;
 
-    fetch(endpoints.users)
+    fetch(`${apiBase}/api/users/`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Request failed with ${response.status}`);

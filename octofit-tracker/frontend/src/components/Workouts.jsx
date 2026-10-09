@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { endpoints, normalizeCollection } from '../api.js';
+import { apiBase, normalizeCollection } from '../api.js';
 
 export default function Workouts() {
   const [items, setItems] = useState([]);
@@ -8,7 +8,7 @@ export default function Workouts() {
   useEffect(() => {
     let isMounted = true;
 
-    fetch(endpoints.workouts)
+    fetch(`${apiBase}/api/workouts/`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Request failed with ${response.status}`);
