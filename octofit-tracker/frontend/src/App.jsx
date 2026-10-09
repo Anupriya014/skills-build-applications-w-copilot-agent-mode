@@ -19,7 +19,7 @@ export default function App() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <span className="navbar-brand">OctoFit Tracker</span>
-          <div className="navbar-nav ms-auto d-flex flex-row gap-3">
+          <div className="navbar-nav ms-auto d-flex flex-row gap-3 flex-wrap">
             {navItems.map((item) => (
               <NavLink
                 key={item.path}
